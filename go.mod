@@ -16,7 +16,7 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/golang-jwt/jwt/v4 v4.2.0 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
-	google.golang.org/protobuf v1.30.0
+	google.golang.org/protobuf v1.31.0
 )
 
 replace (
@@ -27,3 +27,5 @@ replace (
 	golang.org/x/net => golang.org/x/net v0.0.0-20220822230855-b0a4917ee28c
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20220823224334-20c2bfdbfe24
 )
+
+replace github.com/microsoft/moc => ../moc
