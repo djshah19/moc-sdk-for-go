@@ -402,7 +402,9 @@ func (c *client) getWssdVirtualMachineOSConfiguration(s *compute.OSProfile) (*ws
 		osconfig.CustomData = *s.CustomData
 	}
 
-	osconfig.ProxyConfiguration = c.getWssdVirtualMachineProxyConfiguration(s.ProxyConfiguration)
+	if s.ProxyConfiguration != nil {
+		osconfig.ProxyConfiguration = c.getWssdVirtualMachineProxyConfiguration(s.ProxyConfiguration)
+	}
 
 	return &osconfig, nil
 }
